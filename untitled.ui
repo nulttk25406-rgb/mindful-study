@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1470</width>
+    <height>863</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Quiz App</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../Downloads/Mar 2, 2026 at 01_58_50 AM.png</normaloff>../../../Downloads/Mar 2, 2026 at 01_58_50 AM.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* ===== GLOBAL ===== */
+
+QMainWindow, QWidget {
+    background-color: #eef5f3;
+    font-family: &quot;SF Pro Display&quot;, &quot;Segoe UI&quot;, Arial;
+    font-size: 14px;
+    color: #2c3e3a;
+}
+
+
+/* ===== TITLE FRAME ===== */
+
+#title_frame {
+    background-color: #e4f0ec;
+    border-radius: 10px;
+}
+
+#title_frame QLabel {
+    color: #4aa485;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+
+/* ===== SECTION HEADER ===== */
+
+QLabel {
+    color: #4aa485;
+    font-weight: 600;
+}
+
+
+/* ===== INPUTS ===== */
+
+QLineEdit,
+QComboBox,
+QSpinBox {
+    background: white;
+    border: 2px solid #d7e7e2;
+    border-radius: 8px;
+    padding: 6px 8px;
+}
+
+QLineEdit:focus,
+QComboBox:focus,
+QSpinBox:focus {
+    border: 2px solid #5FB79B;
+}
+
+
+/* ===== COMBOBOX ===== */
+
+QComboBox::drop-down {
+    border: none;
+}
+
+QComboBox::down-arrow {
+    image: none;
+}
+
+
+/* ===== TOOLBOX ===== */
+
+QToolBox::tab {
+    background: #e4f0ec;
+    border-radius: 8px;
+    padding: 6px;
+    font-weight: 600;
+}
+
+QToolBox::tab:selected {
+    background: #5FB79B;
+    color: white;
+}
+
+
+/* ===== QUESTION BOX ===== */
+
+QFrame {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #d9e8e3;
+}
+
+
+/* ===== QUESTION TITLE BAR ===== */
+
+QLabel#questionTitle {
+    background: #5FB79B;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+
+/* ===== RADIO BUTTON ===== */
+
+QRadioButton {
+    spacing: 8px;
+    font-size: 14px;
+}
+
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+}
+
+QRadioButton::indicator:unchecked {
+    border: 2px solid #9dcfc0;
+    border-radius: 8px;
+    background: white;
+}
+
+QRadioButton::indicator:checked {
+    border: 2px solid #5FB79B;
+    border-radius: 8px;
+    background: #5FB79B;
+}
+
+
+/* ===== MAIN BUTTON ===== */
+
+QPushButton {
+    background-color: #5FB79B;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+QPushButton:hover {
+    background-color: #4aa485;
+}
+
+QPushButton:pressed {
+    background-color: #3c8e74;
+}
+
+
+/* ===== LARGE API BUTTON ===== */
+
+QPushButton#fetchButton {
+    font-size: 18px;
+    padding: 14px;
+}
+
+
+/* ===== SECONDARY BUTTON ===== */
+
+QPushButton#retryButton {
+    background-color: #9fd7c6;
+}
+
+QPushButton#retryButton:hover {
+    background-color: #8acbb7;
+}
+
+
+/* ===== PROGRESS BADGE ===== */
+
+QLabel#progressLabel {
+    background: #5FB79B;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 10px;
+}
+
+
+/* ===== TEXT QUESTION AREA ===== */
+
+QTextEdit {
+    background: #f7fbf9;
+    border-radius: 10px;
+    border: 1px solid #d8ebe5;
+    padding: 10px;
+}
+
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="title_frame">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>20</y>
+      <width>821</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>10</y>
+       <width>211</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Fredoka</family>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+	color:#5FA382;
+	font-family: Fredoka;
+}</string>
+     </property>
+     <property name="text">
+      <string>Quiz Application</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>10</y>
+       <width>91</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../../../Downloads/15ef6990-09e6-4771-937d-8241240567fc.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QToolBox" name="toolBox">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>150</y>
+      <width>821</width>
+      <height>621</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>817</width>
+       <height>549</height>
+      </rect>
+     </property>
+     <attribute name="label">
+      <string>Cài đặt</string>
+     </attribute>
+     <widget class="QFrame" name="db_frame">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>711</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Số lượng câu hỏi</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QSpinBox" name="spinBox">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>50</number>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Độ khó</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QComboBox" name="comboBox_2"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Môn học</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="comboBox"/>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Loại câu hỏi</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QComboBox" name="comboBox_3"/>
+       </item>
+       <item row="2" column="0" colspan="4">
+        <widget class="QFrame" name="frame_2">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <property name="leftMargin">
+           <number>15</number>
+          </property>
+          <property name="topMargin">
+           <number>20</number>
+          </property>
+          <property name="rightMargin">
+           <number>15</number>
+          </property>
+          <property name="bottomMargin">
+           <number>9</number>
+          </property>
+          <property name="horizontalSpacing">
+           <number>15</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>6</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="btnFetch">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}</string>
+            </property>
+            <property name="text">
+             <string>Lấy câu hỏi mới</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>817</width>
+       <height>549</height>
+      </rect>
+     </property>
+     <attribute name="label">
+      <string>Câu hỏi</string>
+     </attribute>
+     <widget class="QFrame" name="questions_frame">
+      <property name="geometry">
+       <rect>
+        <x>19</x>
+        <y>14</y>
+        <width>781</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QFrame" name="info_frame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="spacing">
+           <number>30</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QLabel" name="label_7">
+              <property name="text">
+               <string>Môn học</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_8">
+              <property name="text">
+               <string>Độ khó</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_2"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QLabel" name="question_count_label">
+            <property name="text">
+             <string>10/50</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_5">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_10">
+            <property name="text">
+             <string>Câu hỏi:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPlainTextEdit" name="plainTextEdit"/>
+          </item>
+          <item>
+           <widget class="QFrame" name="answer_frame">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <widget class="QRadioButton" name="radio4">
+               <property name="text">
+                <string>RadioButton</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radio1">
+               <property name="text">
+                <string>RadioButton</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radio2">
+               <property name="text">
+                <string>RadioButton</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radio3">
+               <property name="text">
+                <string>RadioButton</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>18</width>
+           <height>42</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QFrame" name="function_frame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}</string>
+            </property>
+            <property name="text">
+             <string>Thử lại</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnCheck">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}
+</string>
+            </property>
+            <property name="text">
+             <string>Kiểm tra</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnNext">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}</string>
+            </property>
+            <property name="text">
+             <string>Tiếp tục</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="maximizeButton">
+    <property name="geometry">
+     <rect>
+      <x>1410</x>
+      <y>0</y>
+      <width>31</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+                           font-size:18px;
+                           border:none;
+                           background:black;
+                       }
+QPushButton:hover{
+                           background:#E0E0E0;
+                       }</string>
+    </property>
+    <property name="text">
+     <string>□</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="closeButton">
+    <property name="geometry">
+     <rect>
+      <x>1440</x>
+      <y>0</y>
+      <width>31</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+                           font-size:18px;
+                           border:none;
+                           background:black;
+                       }
+QPushButton:hover{
+                           background:red;
+                       }</string>
+    </property>
+    <property name="text">
+     <string>✕</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="minimizeButton">
+    <property name="geometry">
+     <rect>
+      <x>1380</x>
+      <y>0</y>
+      <width>31</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+                           font-size:18px;
+                           border:none;
+                           background:black;
+                       }
+                       QPushButton:hover{
+                           background:#E0E0E0;
+                       }
+</string>
+    </property>
+    <property name="text">
+     <string>─</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1470</width>
+     <height>36</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
