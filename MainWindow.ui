@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Mindfulstudy</class>
+ <widget class="QMainWindow" name="Mindfulstudy">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1091</width>
+    <height>885</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Mindful study </string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralwidget {
+    border-image: url(&quot;C:/Users/nguye/OneDrive/Pictures/Screenshots/Ảnh chụp màn hình 2026-03-09 213120.png&quot;) 0 0 0 0 stretch stretch;
+}</string>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QFrame" name="frame_7">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QLabel" name="lbl_mindful">
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    color: #4a5c4d; /* Màu xanh xám đậm của app */
+    font-family: &quot;Avenir Next&quot;, &quot;Helvetica&quot;; /* Font bo tròn */
+    font-size: 35px;
+    font-weight: bold;
+    background: transparent;
+}</string>
+         </property>
+         <property name="text">
+          <string>MINDFUL STUDY</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_minimize">
+         <property name="maximumSize">
+          <size>
+           <width>41</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>–</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_maximize">
+         <property name="maximumSize">
+          <size>
+           <width>41</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>□</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_close">
+         <property name="maximumSize">
+          <size>
+           <width>41</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>×</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_6">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QPushButton" name="btn_home">
+         <property name="maximumSize">
+          <size>
+           <width>31</width>
+           <height>41</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: #5D4037; /* Màu nâu đất */ 
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background: transparent;
+}</string>
+         </property>
+         <property name="text">
+          <string>🏠</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lbl_trangchu">
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    color: #5D4037; /* Màu nâu đất */ 
+    font-family: &quot;Anenir Next&quot;, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background: transparent;
+}</string>
+         </property>
+         <property name="text">
+          <string>TRANG CHỦ </string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QFrame" name="frame">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QPushButton" name="btn_deadlines">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-family: &quot;Avenir Next&quot;;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}</string>
+           </property>
+           <property name="text">
+            <string>Deadlines</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_thoikhoabieu">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-family: &quot;Avenir Next&quot;;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}</string>
+           </property>
+           <property name="text">
+            <string>Thời khóa biểu</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_taptrung">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-family: &quot;Avenir Next&quot;;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}</string>
+           </property>
+           <property name="text">
+            <string>Chế độ tập trung </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_baocaonangsuat">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-family: &quot;Avenir Next&quot;;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}</string>
+           </property>
+           <property name="text">
+            <string>Báo cáo năng suất </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_nhatky">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-family: &quot;Avenir Next&quot;;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}</string>
+           </property>
+           <property name="text">
+            <string>Nhật ký cảm xúc </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_dethi">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-family: &quot;Avenir Next&quot;;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}</string>
+           </property>
+           <property name="text">
+            <string>Đề thi </string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QStackedWidget" name="stackedWidget">
+        <property name="styleSheet">
+         <string notr="true">QStackedWidget {
+    background-color: rgba(255, 255, 255, 120); /* Màu trắng mờ như kính */
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 150);
+}</string>
+        </property>
+        <property name="currentIndex">
+         <number>3</number>
+        </property>
+        <widget class="QWidget" name="page_1">
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QFrame" name="frame_2">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="QLabel" name="lbl_nhiemvu">
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    color: #5D4037; /* Màu nâu đất */ 
+    font-family: &quot;Avenir Next &quot;, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background: transparent;
+}</string>
+               </property>
+               <property name="text">
+                <string>Nhiệm vụ hôm nay </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QListWidget" name="listWidget_nv">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QListWidget {
+    background-color: rgba(255, 255, 255, 180); 
+    border-radius: 10px;
+    border: 1px solid #DCE3D5;
+    color: #4a5c4d; /* Màu xanh đậm */
+    font-size: 16px;
+    font-family:&quot;Avenir Next&quot;;
+    padding: 10px;
+}
+/* Lúc bấm vào 1 công việc thì nó hiện màu xanh lá */
+QListWidget::item:selected {
+    background-color: #8db596;
+    color: white;
+    border-radius: 5px;
+}</string>
+               </property>
+               <property name="selectionMode">
+                <enum>QAbstractItemView::SingleSelection</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_nv">
+               <property name="styleSheet">
+                <string notr="true">QLineEdit {
+    background-color: white;
+    border: 2px solid #8db596;
+    border-radius: 15px;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-family:&quot;Avenir Next&quot;;
+    color: #4a5c4d;
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_them1">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-family: &quot;Avenir Next&quot;;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}</string>
+               </property>
+               <property name="text">
+                <string>Thêm</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_xoa1">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-family: &quot;Avenir Next&quot;;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}</string>
+               </property>
+               <property name="text">
+                <string>Xóa </string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_2">
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QLabel" name="lbl_quanlydl">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #5D4037; /* Màu nâu đất */ 
+    font-family: &quot;Anenir Next&quot;, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background: transparent;
+}</string>
+            </property>
+            <property name="text">
+             <string>Quản lý deadlines</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_3">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QLineEdit" name="lineEdit_dl">
+               <property name="styleSheet">
+                <string notr="true">QLineEdit {
+    background-color: white;
+    border: 2px solid #8db596;
+    border-radius: 15px;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-family:&quot;Avenir Next&quot;;
+    color: #4a5c4d;
+}</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDateTimeEdit" name="dateTimeEdit">
+               <property name="font">
+                <font>
+                 <family>Arial Black</family>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QDateTimeEdit {
+    font-family: &quot;Avenir Next&quot;; 
+    font-size: 14px; /
+    font-weight: 500;
+    color: #4a5c4d; /* Màu chữ xanh đậm*/
+    background-color: white;
+    border: 2px solid #8db596; /* Viền xanh lá y chang ô nhập */
+    border-radius: 15px; /* Bo góc */
+    padding: 5px 10px; /* Tạo độ phồng */
+}
+
+QDateTimeEdit::up-button, QDateTimeEdit::down-button {
+    background-color: transparent;
+    border: none;
+    width: 20px;
+}
+
+QDateTimeEdit::up-button:hover, QDateTimeEdit::down-button:hover {
+    background-color: #DCE3D5;
+    border-radius: 5px;
+}</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_5">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QPushButton" name="btn_them2">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-family: &quot;Avenir Next&quot;;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}</string>
+               </property>
+               <property name="text">
+                <string>Thêm</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_luu">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-family: &quot;Avenir Next&quot;;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}</string>
+               </property>
+               <property name="text">
+                <string>Lưu</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_xoa2">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-family: &quot;Avenir Next&quot;;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}</string>
+               </property>
+               <property name="text">
+                <string>Xóa</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_dong">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-family: &quot;Avenir Next&quot;;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}</string>
+               </property>
+               <property name="text">
+                <string>Đóng </string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="listWidget_dl">
+            <property name="styleSheet">
+             <string notr="true">QListWidget {
+    background-color: rgba(255, 255, 255, 180); 
+    border-radius: 10px;
+    border: 1px solid #DCE3D5;
+    color: #4a5c4d; /* Màu xanh đậm */
+    font-size: 16px;
+    font-family:&quot;Avenir Next&quot;;
+    padding: 10px;
+}
+/* Lúc bấm vào 1 công việc thì nó hiện màu xanh lá */
+QListWidget::item:selected {
+    background-color: #8db596;
+    color: white;
+    border-radius: 5px;
+}</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_3">
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <widget class="QFrame" name="frame_4">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_6">
+             <item>
+              <widget class="QLabel" name="lbl_thoikhoabieu">
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    color: #5D4037; /* Màu nâu đất */ 
+    font-family: &quot;Avenir Next&quot;, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background: transparent;
+}</string>
+               </property>
+               <property name="text">
+                <string>Thời khóa biểu</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QTableWidget" name="tableWidget">
+               <property name="styleSheet">
+                <string notr="true">
+QHeaderView::section:vertical {
+    background-color: #7FBF9F ;
+    color: white;
+    font-family: &quot;Avenir Next&quot;;
+    font-weight: bold;
+    border: 1px solid #7a9e82;
+    padding: 8px;
+}</string>
+               </property>
+               <property name="sizeAdjustPolicy">
+                <enum>QAbstractScrollArea::AdjustIgnored</enum>
+               </property>
+               <property name="sortingEnabled">
+                <bool>false</bool>
+               </property>
+               <property name="columnCount">
+                <number>7</number>
+               </property>
+               <attribute name="horizontalHeaderCascadingSectionResizes">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="horizontalHeaderDefaultSectionSize">
+                <number>100</number>
+               </attribute>
+               <attribute name="horizontalHeaderMinimumSectionSize">
+                <number>35</number>
+               </attribute>
+               <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+                <bool>false</bool>
+               </attribute>
+               <attribute name="horizontalHeaderStretchLastSection">
+                <bool>false</bool>
+               </attribute>
+               <attribute name="verticalHeaderCascadingSectionResizes">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="verticalHeaderDefaultSectionSize">
+                <number>68</number>
+               </attribute>
+               <attribute name="verticalHeaderHighlightSections">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="verticalHeaderMinimumSectionSize">
+                <number>32</number>
+               </attribute>
+               <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+                <bool>false</bool>
+               </attribute>
+               <attribute name="verticalHeaderStretchLastSection">
+                <bool>false</bool>
+               </attribute>
+               <row>
+                <property name="text">
+                 <string>Sáng</string>
+                </property>
+               </row>
+               <row>
+                <property name="text">
+                 <string>Chiều  </string>
+                </property>
+               </row>
+               <row>
+                <property name="text">
+                 <string>Tối </string>
+                </property>
+               </row>
+               <column>
+                <property name="text">
+                 <string>Thứ 2</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Thứ 3</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Thứ 4</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Thứ 5 </string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Thứ 6</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Thứ 7</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>CN</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_4">
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <widget class="QLabel" name="lbl_taptrung">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #5D4037; /* Màu nâu đất */ 
+    font-family: &quot;Avenir Next &quot;, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background: transparent;
+}</string>
+            </property>
+            <property name="text">
+             <string>Bạn đang tập trung vào: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_chonnhiemvu">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    background-color: white; 
+    border: 2px dashed #8db596; 
+    border-radius: 15px;
+    padding: 20px; 
+    font-size: 28px;
+    color: #4a5c4d; /* Màu xanh lá đậm */
+    font-weight: bold;
+    font-family: &quot;Avenir Next&quot;, sans-serif;
+}</string>
+            </property>
+            <property name="text">
+             <string>Nhiệm vụ được chọn:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="listWidget_taptrung">
+            <property name="styleSheet">
+             <string notr="true">QListWidget {
+    background-color: rgba(255, 255, 255, 180); 
+    border-radius: 10px;
+    border: 1px solid #DCE3D5;
+    color: #4a5c4d; /* Màu xanh đậm */
+    font-size: 16px;
+    font-family:&quot;Avenir Next&quot;;
+    padding: 10px;
+}
+/* Lúc bấm vào 1 công việc thì nó hiện màu xanh lá */
+QListWidget::item:selected {
+    background-color: #8db596;
+    color: white;
+    border-radius: 5px;
+}</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1091</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="../hinhnen1.qrc"/>
+ </resources>
+ <connections/>
+</ui>
