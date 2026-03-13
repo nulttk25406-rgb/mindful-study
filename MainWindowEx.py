@@ -34,7 +34,6 @@ class MainWindowEx(Ui_Mindfulstudy):
         self.btn_close.clicked.connect(self.processClose)
 
     # kết nối nút chuyển trang     
-        self.btn_home.clicked.connect(self.processChuyenTrangHome)
         self.btn_deadlines.clicked.connect(self.processChuyenTrangDeadlines)
         self.btn_thoikhoabieu.clicked.connect(self.processChuyenTrangThoiKhoaBieu)
         self.btn_taptrung.clicked.connect(self.processChuyenTrangTapTrung)
@@ -91,7 +90,7 @@ class MainWindowEx(Ui_Mindfulstudy):
         msg.setText("Bạn có chắc chắn muốn thoát ứng dụng không?")
         msg.setWindowTitle("Xác nhận thoát")
         msg.setIcon(QMessageBox.Icon.Question)
-        msg.setStandardButtons(QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
+        msg.setStandardButtons(QMessageBox.StandardButton.Yes| QMessageBox.StandardButton.No)
         if msg.exec() == QMessageBox.StandardButton.Yes:
             self.MainWindow.close()
 
