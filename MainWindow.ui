@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1091</width>
+    <width>1081</width>
     <height>885</height>
    </rect>
   </property>
@@ -30,74 +30,13 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_3">
     <item>
-     <widget class="QFrame" name="frame_7">
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_5">
-       <item>
-        <widget class="QLabel" name="lbl_mindful">
-         <property name="styleSheet">
-          <string notr="true">QLabel {
-    color: #4a5c4d; /* Màu xanh xám đậm của app */
-    font-family: &quot;Avenir Next&quot;, &quot;Helvetica&quot;; /* Font bo tròn */
-    font-size: 35px;
-    font-weight: bold;
-    background: transparent;
+     <widget class="QFrame" name="frame_9">
+      <property name="styleSheet">
+       <string notr="true">QFrame {
+    background-color: transparent; /* Làm trong suốt màu nền 100% */
+    border: none;                  /* Xóa luôn cái đường viền (nếu có) để khỏi bị gạch chéo */
 }</string>
-         </property>
-         <property name="text">
-          <string>MINDFUL STUDY</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="btn_minimize">
-         <property name="maximumSize">
-          <size>
-           <width>41</width>
-           <height>28</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>–</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="btn_maximize">
-         <property name="maximumSize">
-          <size>
-           <width>41</width>
-           <height>28</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>□</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="btn_close">
-         <property name="maximumSize">
-          <size>
-           <width>41</width>
-           <height>28</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>×</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item>
-     <widget class="QFrame" name="frame_6">
+      </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
@@ -106,41 +45,117 @@
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_4">
        <item>
-        <widget class="QPushButton" name="btn_home">
-         <property name="maximumSize">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
           <size>
-           <width>31</width>
-           <height>41</height>
+           <width>953</width>
+           <height>20</height>
           </size>
          </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton {
-    color: #5D4037; /* Màu nâu đất */ 
-    font-family: &quot;Segoe UI&quot;, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    background: transparent;
-}</string>
-         </property>
-         <property name="text">
-          <string>🏠</string>
-         </property>
-        </widget>
+        </spacer>
        </item>
        <item>
-        <widget class="QLabel" name="lbl_trangchu">
+        <widget class="QFrame" name="frame_7">
+         <property name="maximumSize">
+          <size>
+           <width>151</width>
+           <height>52</height>
+          </size>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
          <property name="styleSheet">
-          <string notr="true">QLabel {
-    color: #5D4037; /* Màu nâu đất */ 
-    font-family: &quot;Anenir Next&quot;, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    background: transparent;
+          <string notr="true">QFrame {
+    background-color: transparent; /* Làm trong suốt màu nền 100% */
+    border: none;                  /* Xóa luôn cái đường viền (nếu có) để khỏi bị gạch chéo */
 }</string>
          </property>
-         <property name="text">
-          <string>TRANG CHỦ </string>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
          </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QPushButton" name="btn_minimize">
+            <property name="maximumSize">
+             <size>
+              <width>41</width>
+              <height>28</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+               QPushButton{
+                   font-size:18px;
+                   border:none;
+                   background:transparent;
+               }
+               QPushButton:hover{
+                   background:#E0E0E0;
+               }
+               &quot;&quot;&quot;)
+</string>
+            </property>
+            <property name="text">
+             <string>–</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_maximize">
+            <property name="maximumSize">
+             <size>
+              <width>41</width>
+              <height>28</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+                   font-size:18px;
+                   border:none;
+                   background:transparent;
+               }
+               QPushButton:hover{
+                   background:#E0E0E0;
+               }
+               </string>
+            </property>
+            <property name="text">
+             <string>□</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_close">
+            <property name="maximumSize">
+             <size>
+              <width>41</width>
+              <height>28</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+                   font-size:18px;
+                   border:none;
+                   background:transparent;
+               }
+               QPushButton:hover{
+                   background:red;
+                   color:white;
+               }</string>
+            </property>
+            <property name="text">
+             <string>×</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
       </layout>
@@ -183,7 +198,7 @@ QPushButton:pressed {
 }</string>
            </property>
            <property name="text">
-            <string>Deadlines</string>
+            <string>⏳ Deadlines </string>
            </property>
           </widget>
          </item>
@@ -210,7 +225,7 @@ QPushButton:pressed {
 }</string>
            </property>
            <property name="text">
-            <string>Thời khóa biểu</string>
+            <string>🗓️  Thời khóa biểu</string>
            </property>
           </widget>
          </item>
@@ -253,7 +268,7 @@ QPushButton:pressed {
 }</string>
            </property>
            <property name="text">
-            <string>Chế độ tập trung </string>
+            <string>📌 Chế độ tập trung </string>
            </property>
           </widget>
          </item>
@@ -296,7 +311,7 @@ QPushButton:pressed {
 }</string>
            </property>
            <property name="text">
-            <string>Báo cáo năng suất </string>
+            <string>📊 Báo cáo năng suất </string>
            </property>
           </widget>
          </item>
@@ -339,7 +354,7 @@ QPushButton:pressed {
 }</string>
            </property>
            <property name="text">
-            <string>Nhật ký cảm xúc </string>
+            <string>🥰 Nhật ký cảm xúc </string>
            </property>
           </widget>
          </item>
@@ -382,7 +397,7 @@ QPushButton:pressed {
 }</string>
            </property>
            <property name="text">
-            <string>Đề thi </string>
+            <string>📄 Đề thi </string>
            </property>
           </widget>
          </item>
@@ -399,7 +414,7 @@ QPushButton:pressed {
 }</string>
         </property>
         <property name="currentIndex">
-         <number>3</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="page_1">
          <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -416,19 +431,44 @@ QPushButton:pressed {
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_2">
              <item>
-              <widget class="QLabel" name="lbl_nhiemvu">
-               <property name="styleSheet">
-                <string notr="true">QLabel {
+              <widget class="QFrame" name="frame_8">
+               <property name="maximumSize">
+                <size>
+                 <width>223</width>
+                 <height>46</height>
+                </size>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_6">
+                <item>
+                 <widget class="QLabel" name="label">
+                  <property name="text">
+                   <string>📝</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lbl_nhiemvu">
+                  <property name="styleSheet">
+                   <string notr="true">QLabel {
     color: #5D4037; /* Màu nâu đất */ 
     font-family: &quot;Avenir Next &quot;, sans-serif;
     font-size: 18px;
     font-weight: bold;
     background: transparent;
 }</string>
-               </property>
-               <property name="text">
-                <string>Nhiệm vụ hôm nay </string>
-               </property>
+                  </property>
+                  <property name="text">
+                   <string>Nhiệm vụ hôm nay </string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </widget>
              </item>
              <item>
@@ -999,7 +1039,7 @@ QListWidget::item:selected {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1091</width>
+     <width>1081</width>
      <height>26</height>
     </rect>
    </property>
@@ -1008,6 +1048,7 @@ QListWidget::item:selected {
  </widget>
  <resources>
   <include location="../hinhnen1.qrc"/>
+  <include location="../icon.qrc"/>
  </resources>
  <connections/>
 </ui>

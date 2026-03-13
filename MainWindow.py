@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'giao_dien.ui'
+# Form implementation generated from reading ui file 'MainWindow.ui'
 #
 # Created by: PyQt6 UI code generator 6.10.0
 #
@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_Mindfulstudy(object):
     def setupUi(self, Mindfulstudy):
         Mindfulstudy.setObjectName("Mindfulstudy")
-        Mindfulstudy.resize(1091, 885)
+        Mindfulstudy.resize(1081, 885)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -26,63 +26,73 @@ class Ui_Mindfulstudy(object):
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.centralwidget)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
-        self.frame_7 = QtWidgets.QFrame(parent=self.centralwidget)
+        self.frame_9 = QtWidgets.QFrame(parent=self.centralwidget)
+        self.frame_9.setStyleSheet("QFrame {\n"
+"    background-color: transparent; /* Làm trong suốt màu nền 100% */\n"
+"    border: none;                  /* Xóa luôn cái đường viền (nếu có) để khỏi bị gạch chéo */\n"
+"}")
+        self.frame_9.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frame_9.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frame_9.setObjectName("frame_9")
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.frame_9)
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        spacerItem = QtWidgets.QSpacerItem(953, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.horizontalLayout_4.addItem(spacerItem)
+        self.frame_7 = QtWidgets.QFrame(parent=self.frame_9)
+        self.frame_7.setMaximumSize(QtCore.QSize(151, 52))
+        self.frame_7.setContextMenuPolicy(QtCore.Qt.ContextMenuPolicy.NoContextMenu)
+        self.frame_7.setStyleSheet("QFrame {\n"
+"    background-color: transparent; /* Làm trong suốt màu nền 100% */\n"
+"    border: none;                  /* Xóa luôn cái đường viền (nếu có) để khỏi bị gạch chéo */\n"
+"}")
         self.frame_7.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame_7.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_7.setObjectName("frame_7")
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.frame_7)
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
-        self.lbl_mindful = QtWidgets.QLabel(parent=self.frame_7)
-        self.lbl_mindful.setStyleSheet("QLabel {\n"
-"    color: #4a5c4d; /* Màu xanh xám đậm của app */\n"
-"    font-family: \"Avenir Next\", \"Helvetica\"; /* Font bo tròn */\n"
-"    font-size: 35px;\n"
-"    font-weight: bold;\n"
-"    background: transparent;\n"
-"}")
-        self.lbl_mindful.setObjectName("lbl_mindful")
-        self.horizontalLayout_5.addWidget(self.lbl_mindful)
         self.btn_minimize = QtWidgets.QPushButton(parent=self.frame_7)
         self.btn_minimize.setMaximumSize(QtCore.QSize(41, 28))
+        self.btn_minimize.setStyleSheet("\n"
+"               QPushButton{\n"
+"                   font-size:18px;\n"
+"                   border:none;\n"
+"                   background:transparent;\n"
+"               }\n"
+"               QPushButton:hover{\n"
+"                   background:#E0E0E0;\n"
+"               }\n"
+"               \"\"\")\n"
+"")
         self.btn_minimize.setObjectName("btn_minimize")
         self.horizontalLayout_5.addWidget(self.btn_minimize)
         self.btn_maximize = QtWidgets.QPushButton(parent=self.frame_7)
         self.btn_maximize.setMaximumSize(QtCore.QSize(41, 28))
+        self.btn_maximize.setStyleSheet("QPushButton{\n"
+"                   font-size:18px;\n"
+"                   border:none;\n"
+"                   background:transparent;\n"
+"               }\n"
+"               QPushButton:hover{\n"
+"                   background:#E0E0E0;\n"
+"               }\n"
+"               ")
         self.btn_maximize.setObjectName("btn_maximize")
         self.horizontalLayout_5.addWidget(self.btn_maximize)
         self.btn_close = QtWidgets.QPushButton(parent=self.frame_7)
         self.btn_close.setMaximumSize(QtCore.QSize(41, 28))
+        self.btn_close.setStyleSheet("QPushButton{\n"
+"                   font-size:18px;\n"
+"                   border:none;\n"
+"                   background:transparent;\n"
+"               }\n"
+"               QPushButton:hover{\n"
+"                   background:red;\n"
+"                   color:white;\n"
+"               }")
         self.btn_close.setObjectName("btn_close")
         self.horizontalLayout_5.addWidget(self.btn_close)
-        self.verticalLayout_3.addWidget(self.frame_7)
-        self.frame_6 = QtWidgets.QFrame(parent=self.centralwidget)
-        self.frame_6.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
-        self.frame_6.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
-        self.frame_6.setObjectName("frame_6")
-        self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.frame_6)
-        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
-        self.btn_home = QtWidgets.QPushButton(parent=self.frame_6)
-        self.btn_home.setMaximumSize(QtCore.QSize(31, 41))
-        self.btn_home.setStyleSheet("QPushButton {\n"
-"    color: #5D4037; /* Màu nâu đất */ \n"
-"    font-family: \"Segoe UI\", sans-serif;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    background: transparent;\n"
-"}")
-        self.btn_home.setObjectName("btn_home")
-        self.horizontalLayout_4.addWidget(self.btn_home)
-        self.lbl_trangchu = QtWidgets.QLabel(parent=self.frame_6)
-        self.lbl_trangchu.setStyleSheet("QLabel {\n"
-"    color: #5D4037; /* Màu nâu đất */ \n"
-"    font-family: \"Anenir Next\", sans-serif;\n"
-"    font-size: 18px;\n"
-"    font-weight: bold;\n"
-"    background: transparent;\n"
-"}")
-        self.lbl_trangchu.setObjectName("lbl_trangchu")
-        self.horizontalLayout_4.addWidget(self.lbl_trangchu)
-        self.verticalLayout_3.addWidget(self.frame_6)
+        self.horizontalLayout_4.addWidget(self.frame_7)
+        self.verticalLayout_3.addWidget(self.frame_9)
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.frame = QtWidgets.QFrame(parent=self.centralwidget)
@@ -301,7 +311,17 @@ class Ui_Mindfulstudy(object):
         self.frame_2.setObjectName("frame_2")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.frame_2)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.lbl_nhiemvu = QtWidgets.QLabel(parent=self.frame_2)
+        self.frame_8 = QtWidgets.QFrame(parent=self.frame_2)
+        self.frame_8.setMaximumSize(QtCore.QSize(223, 46))
+        self.frame_8.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frame_8.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frame_8.setObjectName("frame_8")
+        self.horizontalLayout_6 = QtWidgets.QHBoxLayout(self.frame_8)
+        self.horizontalLayout_6.setObjectName("horizontalLayout_6")
+        self.label = QtWidgets.QLabel(parent=self.frame_8)
+        self.label.setObjectName("label")
+        self.horizontalLayout_6.addWidget(self.label)
+        self.lbl_nhiemvu = QtWidgets.QLabel(parent=self.frame_8)
         self.lbl_nhiemvu.setStyleSheet("QLabel {\n"
 "    color: #5D4037; /* Màu nâu đất */ \n"
 "    font-family: \"Avenir Next \", sans-serif;\n"
@@ -310,7 +330,8 @@ class Ui_Mindfulstudy(object):
 "    background: transparent;\n"
 "}")
         self.lbl_nhiemvu.setObjectName("lbl_nhiemvu")
-        self.verticalLayout_2.addWidget(self.lbl_nhiemvu)
+        self.horizontalLayout_6.addWidget(self.lbl_nhiemvu)
+        self.verticalLayout_2.addWidget(self.frame_8)
         self.listWidget_nv = QtWidgets.QListWidget(parent=self.frame_2)
         self.listWidget_nv.setEnabled(True)
         self.listWidget_nv.setStyleSheet("QListWidget {\n"
@@ -710,7 +731,7 @@ class Ui_Mindfulstudy(object):
         self.verticalLayout_3.addLayout(self.horizontalLayout_3)
         Mindfulstudy.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=Mindfulstudy)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1091, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1081, 26))
         self.menubar.setObjectName("menubar")
         Mindfulstudy.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=Mindfulstudy)
@@ -718,24 +739,22 @@ class Ui_Mindfulstudy(object):
         Mindfulstudy.setStatusBar(self.statusbar)
 
         self.retranslateUi(Mindfulstudy)
-        self.stackedWidget.setCurrentIndex(3)
+        self.stackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Mindfulstudy)
 
     def retranslateUi(self, Mindfulstudy):
         _translate = QtCore.QCoreApplication.translate
         Mindfulstudy.setWindowTitle(_translate("Mindfulstudy", "Mindful study "))
-        self.lbl_mindful.setText(_translate("Mindfulstudy", "MINDFUL STUDY"))
         self.btn_minimize.setText(_translate("Mindfulstudy", "–"))
         self.btn_maximize.setText(_translate("Mindfulstudy", "□"))
         self.btn_close.setText(_translate("Mindfulstudy", "×"))
-        self.btn_home.setText(_translate("Mindfulstudy", "🏠"))
-        self.lbl_trangchu.setText(_translate("Mindfulstudy", "TRANG CHỦ "))
-        self.btn_deadlines.setText(_translate("Mindfulstudy", "Deadlines"))
-        self.btn_thoikhoabieu.setText(_translate("Mindfulstudy", "Thời khóa biểu"))
-        self.btn_taptrung.setText(_translate("Mindfulstudy", "Chế độ tập trung "))
-        self.btn_baocaonangsuat.setText(_translate("Mindfulstudy", "Báo cáo năng suất "))
-        self.btn_nhatky.setText(_translate("Mindfulstudy", "Nhật ký cảm xúc "))
-        self.btn_dethi.setText(_translate("Mindfulstudy", "Đề thi "))
+        self.btn_deadlines.setText(_translate("Mindfulstudy", "⏳ Deadlines "))
+        self.btn_thoikhoabieu.setText(_translate("Mindfulstudy", "🗓️  Thời khóa biểu"))
+        self.btn_taptrung.setText(_translate("Mindfulstudy", "📌 Chế độ tập trung "))
+        self.btn_baocaonangsuat.setText(_translate("Mindfulstudy", "📊 Báo cáo năng suất "))
+        self.btn_nhatky.setText(_translate("Mindfulstudy", "🥰 Nhật ký cảm xúc "))
+        self.btn_dethi.setText(_translate("Mindfulstudy", "📄 Đề thi "))
+        self.label.setText(_translate("Mindfulstudy", "📝"))
         self.lbl_nhiemvu.setText(_translate("Mindfulstudy", "Nhiệm vụ hôm nay "))
         self.btn_them1.setText(_translate("Mindfulstudy", "Thêm"))
         self.btn_xoa1.setText(_translate("Mindfulstudy", "Xóa "))
