@@ -18,14 +18,14 @@ class Ui_Mindfulstudy(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(Mindfulstudy.sizePolicy().hasHeightForWidth())
         Mindfulstudy.setSizePolicy(sizePolicy)
-        Mindfulstudy.setStyleSheet("#centralwidget {\n"
-"    border-image: url(\"C:/Users/nguye/OneDrive/Pictures/Screenshots/Ảnh chụp màn hình 2026-03-09 213120.png\") 0 0 0 0 stretch stretch;\n"
+        Mindfulstudy.setStyleSheet("#centralwidget{\n"
+"border-image: url( \"C:/Users/nguye/Downloads/bgd.jpg\");\n"
 "}")
         Mindfulstudy.setUnifiedTitleAndToolBarOnMac(False)
         self.centralwidget = QtWidgets.QWidget(parent=Mindfulstudy)
         self.centralwidget.setObjectName("centralwidget")
-        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.centralwidget)
-        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.verticalLayout_9 = QtWidgets.QVBoxLayout(self.centralwidget)
+        self.verticalLayout_9.setObjectName("verticalLayout_9")
         self.frame_9 = QtWidgets.QFrame(parent=self.centralwidget)
         self.frame_9.setStyleSheet("QFrame {\n"
 "    background-color: transparent; /* Làm trong suốt màu nền 100% */\n"
@@ -36,14 +36,36 @@ class Ui_Mindfulstudy(object):
         self.frame_9.setObjectName("frame_9")
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.frame_9)
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.btn_back = QtWidgets.QPushButton(parent=self.frame_9)
+        self.btn_back.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        self.btn_back.setStyleSheet("QPushButton {\n"
+"    background-color: #7FBF9F;   /* xanh nhạt */\n"
+"    color: white;                /* chữ trắng */\n"
+"    border-radius: 22px;         /* bo tròn */\n"
+"    font-size: 20px;\n"
+"    font-family: \"Avenir Next\";\n"
+"    font-weight: bold;\n"
+"    padding: 10px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #5FA382;   /* xanh đậm khi rê chuột */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */\n"
+"}")
+        self.btn_back.setObjectName("btn_back")
+        self.horizontalLayout_4.addWidget(self.btn_back)
         spacerItem = QtWidgets.QSpacerItem(953, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_4.addItem(spacerItem)
         self.frame_7 = QtWidgets.QFrame(parent=self.frame_9)
-        self.frame_7.setMaximumSize(QtCore.QSize(151, 52))
+        self.frame_7.setMaximumSize(QtCore.QSize(160, 60))
         self.frame_7.setContextMenuPolicy(QtCore.Qt.ContextMenuPolicy.NoContextMenu)
         self.frame_7.setStyleSheet("QFrame {\n"
-"    background-color: transparent; /* Làm trong suốt màu nền 100% */\n"
-"    border: none;                  /* Xóa luôn cái đường viền (nếu có) để khỏi bị gạch chéo */\n"
+"    background-color: transparent; \n"
+"    border: none;                 \n"
 "}")
         self.frame_7.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame_7.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
@@ -52,8 +74,7 @@ class Ui_Mindfulstudy(object):
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
         self.btn_minimize = QtWidgets.QPushButton(parent=self.frame_7)
         self.btn_minimize.setMaximumSize(QtCore.QSize(41, 28))
-        self.btn_minimize.setStyleSheet("\n"
-"               QPushButton{\n"
+        self.btn_minimize.setStyleSheet("QPushButton{\n"
 "                   font-size:18px;\n"
 "                   border:none;\n"
 "                   background:transparent;\n"
@@ -61,8 +82,7 @@ class Ui_Mindfulstudy(object):
 "               QPushButton:hover{\n"
 "                   background:#E0E0E0;\n"
 "               }\n"
-"               \"\"\")\n"
-"")
+"               ")
         self.btn_minimize.setObjectName("btn_minimize")
         self.horizontalLayout_5.addWidget(self.btn_minimize)
         self.btn_maximize = QtWidgets.QPushButton(parent=self.frame_7)
@@ -92,7 +112,7 @@ class Ui_Mindfulstudy(object):
         self.btn_close.setObjectName("btn_close")
         self.horizontalLayout_5.addWidget(self.btn_close)
         self.horizontalLayout_4.addWidget(self.frame_7)
-        self.verticalLayout_3.addWidget(self.frame_9)
+        self.verticalLayout_9.addWidget(self.frame_9)
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.frame = QtWidgets.QFrame(parent=self.centralwidget)
@@ -313,6 +333,10 @@ class Ui_Mindfulstudy(object):
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.frame_8 = QtWidgets.QFrame(parent=self.frame_2)
         self.frame_8.setMaximumSize(QtCore.QSize(223, 46))
+        self.frame_8.setStyleSheet("QFrame {\n"
+"    background-color: transparent; \n"
+"    border: none;                 \n"
+"}")
         self.frame_8.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame_8.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_8.setObjectName("frame_8")
@@ -323,7 +347,7 @@ class Ui_Mindfulstudy(object):
         self.horizontalLayout_6.addWidget(self.label)
         self.lbl_nhiemvu = QtWidgets.QLabel(parent=self.frame_8)
         self.lbl_nhiemvu.setStyleSheet("QLabel {\n"
-"    color: #5D4037; /* Màu nâu đất */ \n"
+"    color: #444743; /* Màu nâu đất */ \n"
 "    font-family: \"Avenir Next \", sans-serif;\n"
 "    font-size: 18px;\n"
 "    font-weight: bold;\n"
@@ -332,7 +356,17 @@ class Ui_Mindfulstudy(object):
         self.lbl_nhiemvu.setObjectName("lbl_nhiemvu")
         self.horizontalLayout_6.addWidget(self.lbl_nhiemvu)
         self.verticalLayout_2.addWidget(self.frame_8)
-        self.listWidget_nv = QtWidgets.QListWidget(parent=self.frame_2)
+        self.frame_10 = QtWidgets.QFrame(parent=self.frame_2)
+        self.frame_10.setStyleSheet("QFrame {\n"
+"    background-color: transparent; \n"
+"    border: none;                 \n"
+"}")
+        self.frame_10.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frame_10.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frame_10.setObjectName("frame_10")
+        self.horizontalLayout_9 = QtWidgets.QHBoxLayout(self.frame_10)
+        self.horizontalLayout_9.setObjectName("horizontalLayout_9")
+        self.listWidget_nv = QtWidgets.QListWidget(parent=self.frame_10)
         self.listWidget_nv.setEnabled(True)
         self.listWidget_nv.setStyleSheet("QListWidget {\n"
 "    background-color: rgba(255, 255, 255, 180); \n"
@@ -351,58 +385,9 @@ class Ui_Mindfulstudy(object):
 "}")
         self.listWidget_nv.setSelectionMode(QtWidgets.QAbstractItemView.SelectionMode.SingleSelection)
         self.listWidget_nv.setObjectName("listWidget_nv")
-        self.verticalLayout_2.addWidget(self.listWidget_nv)
-        self.lineEdit_nv = QtWidgets.QLineEdit(parent=self.frame_2)
-        self.lineEdit_nv.setStyleSheet("QLineEdit {\n"
-"    background-color: white;\n"
-"    border: 2px solid #8db596;\n"
-"    border-radius: 15px;\n"
-"    padding: 8px 15px;\n"
-"    font-size: 14px;\n"
-"    font-family:\"Avenir Next\";\n"
-"    color: #4a5c4d;\n"
-"}")
-        self.lineEdit_nv.setText("")
-        self.lineEdit_nv.setObjectName("lineEdit_nv")
-        self.verticalLayout_2.addWidget(self.lineEdit_nv)
-        self.btn_them1 = QtWidgets.QPushButton(parent=self.frame_2)
-        self.btn_them1.setStyleSheet("QPushButton {\n"
-"    background-color: #7FBF9F;   /* xanh nhạt */\n"
-"    color: white;                /* chữ trắng */\n"
-"    border-radius: 22px;         /* bo tròn */\n"
-"    font-size: 20px;\n"
-"    font-family: \"Avenir Next\";\n"
-"    font-weight: bold;\n"
-"    padding: 10px;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: #5FA382;   /* xanh đậm khi rê chuột */\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */\n"
-"}QPushButton {\n"
-"    background-color: #7FBF9F;   /* xanh nhạt */\n"
-"    color: white;                /* chữ trắng */\n"
-"    border-radius: 22px;         /* bo tròn */\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    padding: 10px;\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: #5FA382;   /* xanh đậm khi rê chuột */\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */\n"
-"}")
-        self.btn_them1.setObjectName("btn_them1")
-        self.verticalLayout_2.addWidget(self.btn_them1)
-        self.btn_xoa1 = QtWidgets.QPushButton(parent=self.frame_2)
+        self.horizontalLayout_9.addWidget(self.listWidget_nv)
+        self.btn_xoa1 = QtWidgets.QPushButton(parent=self.frame_10)
+        self.btn_xoa1.setMaximumSize(QtCore.QSize(76, 44))
         self.btn_xoa1.setStyleSheet("QPushButton {\n"
 "    background-color: #7FBF9F;   /* xanh nhạt */\n"
 "    color: white;                /* chữ trắng */\n"
@@ -438,7 +423,70 @@ class Ui_Mindfulstudy(object):
 "    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */\n"
 "}")
         self.btn_xoa1.setObjectName("btn_xoa1")
-        self.verticalLayout_2.addWidget(self.btn_xoa1)
+        self.horizontalLayout_9.addWidget(self.btn_xoa1)
+        self.verticalLayout_2.addWidget(self.frame_10)
+        self.frame_11 = QtWidgets.QFrame(parent=self.frame_2)
+        self.frame_11.setStyleSheet("QFrame {\n"
+"    background-color: transparent; \n"
+"    border: none;                 \n"
+"}")
+        self.frame_11.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frame_11.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frame_11.setObjectName("frame_11")
+        self.horizontalLayout_7 = QtWidgets.QHBoxLayout(self.frame_11)
+        self.horizontalLayout_7.setObjectName("horizontalLayout_7")
+        self.lineEdit_nv = QtWidgets.QLineEdit(parent=self.frame_11)
+        self.lineEdit_nv.setStyleSheet("QLineEdit {\n"
+"    background-color: white;\n"
+"    border: 2px solid #8db596;\n"
+"    border-radius: 15px;\n"
+"    padding: 8px 15px;\n"
+"    font-size: 14px;\n"
+"    font-family:\"Avenir Next\";\n"
+"    color: #4a5c4d;\n"
+"}")
+        self.lineEdit_nv.setText("")
+        self.lineEdit_nv.setObjectName("lineEdit_nv")
+        self.horizontalLayout_7.addWidget(self.lineEdit_nv)
+        self.btn_them1 = QtWidgets.QPushButton(parent=self.frame_11)
+        self.btn_them1.setMaximumSize(QtCore.QSize(76, 44))
+        self.btn_them1.setStyleSheet("QPushButton {\n"
+"    background-color: #7FBF9F;   /* xanh nhạt */\n"
+"    color: white;                /* chữ trắng */\n"
+"    border-radius: 22px;         /* bo tròn */\n"
+"    font-size: 20px;\n"
+"    font-family: \"Avenir Next\";\n"
+"    font-weight: bold;\n"
+"    padding: 10px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #5FA382;   /* xanh đậm khi rê chuột */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */\n"
+"}QPushButton {\n"
+"    background-color: #7FBF9F;   /* xanh nhạt */\n"
+"    color: white;                /* chữ trắng */\n"
+"    border-radius: 22px;         /* bo tròn */\n"
+"    font-size: 20px;\n"
+"    font-weight: bold;\n"
+"    padding: 10px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #5FA382;   /* xanh đậm khi rê chuột */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */\n"
+"}")
+        self.btn_them1.setObjectName("btn_them1")
+        self.horizontalLayout_7.addWidget(self.btn_them1)
+        self.verticalLayout_2.addWidget(self.frame_11)
         self.verticalLayout_5.addWidget(self.frame_2)
         self.stackedWidget.addWidget(self.page_1)
         self.page_2 = QtWidgets.QWidget()
@@ -447,7 +495,7 @@ class Ui_Mindfulstudy(object):
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.lbl_quanlydl = QtWidgets.QLabel(parent=self.page_2)
         self.lbl_quanlydl.setStyleSheet("QLabel {\n"
-"    color: #5D4037; /* Màu nâu đất */ \n"
+"    color: #444743; /* Màu nâu đất */ \n"
 "    font-family: \"Anenir Next\", sans-serif;\n"
 "    font-size: 18px;\n"
 "    font-weight: bold;\n"
@@ -625,7 +673,7 @@ class Ui_Mindfulstudy(object):
         self.verticalLayout_6.setObjectName("verticalLayout_6")
         self.lbl_thoikhoabieu = QtWidgets.QLabel(parent=self.frame_4)
         self.lbl_thoikhoabieu.setStyleSheet("QLabel {\n"
-"    color: #5D4037; /* Màu nâu đất */ \n"
+"    color: #444743; /* Màu nâu đất */ \n"
 "    font-family: \"Avenir Next\", sans-serif;\n"
 "    font-size: 18px;\n"
 "    font-weight: bold;\n"
@@ -687,7 +735,7 @@ class Ui_Mindfulstudy(object):
         self.verticalLayout_8.setObjectName("verticalLayout_8")
         self.lbl_taptrung = QtWidgets.QLabel(parent=self.page_4)
         self.lbl_taptrung.setStyleSheet("QLabel {\n"
-"    color: #5D4037; /* Màu nâu đất */ \n"
+"    color: #444743; /* Màu nâu đất */ \n"
 "    font-family: \"Avenir Next \", sans-serif;\n"
 "    font-size: 18px;\n"
 "    font-weight: bold;\n"
@@ -728,7 +776,21 @@ class Ui_Mindfulstudy(object):
         self.verticalLayout_8.addWidget(self.listWidget_taptrung)
         self.stackedWidget.addWidget(self.page_4)
         self.horizontalLayout_3.addWidget(self.stackedWidget)
-        self.verticalLayout_3.addLayout(self.horizontalLayout_3)
+        self.verticalLayout_9.addLayout(self.horizontalLayout_3)
+        self.frame_6 = QtWidgets.QFrame(parent=self.centralwidget)
+        self.frame_6.setMaximumSize(QtCore.QSize(45, 83))
+        self.frame_6.setStyleSheet("QFrame {\n"
+"    background-color: transparent; \n"
+"    border: none;               \n"
+"}")
+        self.frame_6.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frame_6.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frame_6.setObjectName("frame_6")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.frame_6)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        spacerItem1 = QtWidgets.QSpacerItem(20, 58, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        self.verticalLayout_3.addItem(spacerItem1)
+        self.verticalLayout_9.addWidget(self.frame_6)
         Mindfulstudy.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=Mindfulstudy)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1081, 26))
@@ -739,12 +801,13 @@ class Ui_Mindfulstudy(object):
         Mindfulstudy.setStatusBar(self.statusbar)
 
         self.retranslateUi(Mindfulstudy)
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(3)
         QtCore.QMetaObject.connectSlotsByName(Mindfulstudy)
 
     def retranslateUi(self, Mindfulstudy):
         _translate = QtCore.QCoreApplication.translate
         Mindfulstudy.setWindowTitle(_translate("Mindfulstudy", "Mindful study "))
+        self.btn_back.setText(_translate("Mindfulstudy", "Quay lại "))
         self.btn_minimize.setText(_translate("Mindfulstudy", "–"))
         self.btn_maximize.setText(_translate("Mindfulstudy", "□"))
         self.btn_close.setText(_translate("Mindfulstudy", "×"))
@@ -756,8 +819,8 @@ class Ui_Mindfulstudy(object):
         self.btn_dethi.setText(_translate("Mindfulstudy", "📄 Đề thi "))
         self.label.setText(_translate("Mindfulstudy", "📝"))
         self.lbl_nhiemvu.setText(_translate("Mindfulstudy", "Nhiệm vụ hôm nay "))
-        self.btn_them1.setText(_translate("Mindfulstudy", "Thêm"))
         self.btn_xoa1.setText(_translate("Mindfulstudy", "Xóa "))
+        self.btn_them1.setText(_translate("Mindfulstudy", "Thêm"))
         self.lbl_quanlydl.setText(_translate("Mindfulstudy", "Quản lý deadlines"))
         self.btn_them2.setText(_translate("Mindfulstudy", "Thêm"))
         self.btn_luu.setText(_translate("Mindfulstudy", "Lưu"))
