@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NhatKyCamXuc</class>
+ <widget class="QMainWindow" name="NhatKyCamXuc">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1353</width>
+    <height>623</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame_3">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>90</y>
+      <width>901</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QFrame" name="frame">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>40</y>
+       <width>351</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 18px;         /* bo tròn */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QLabel:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+/* Lưu ý: QLabel không có trạng thái &quot;pressed&quot; như QPushButton
+   Nếu muốn hiệu ứng khi click, bạn cần dùng mousePressEvent */
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;📅 Nhập ngày:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::AutoText</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDateEdit" name="dateEdit"/>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QSlider" name="progressBar_emotion">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>190</y>
+       <width>401</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#progressBar_emotion {
+    border: 2px solid #E0E0E0;
+    border-radius: 20px;
+    background-color: white;
+    height: 35px;
+    text-align: center;
+    font-family: &quot;Avenir Next&quot;, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+}
+
+#progressBar_emotion::chunk {
+    background-color: #7FBF9F;
+    border-radius: 18px;
+    margin: 2px;
+}
+#progressBar_emotion {
+    border: 2px solid #E0E0E0;
+    border-radius: 20px;
+    background-color: white;
+    height: 35px;
+    text-align: center;
+    font-family: &quot;Avenir Next&quot;, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+}
+
+#progressBar_emotion::chunk {
+    background-color: #7FBF9F;
+    border-radius: 18px;
+    margin: 2px;
+}
+ </string>
+     </property>
+     <property name="maximum">
+      <number>6</number>
+     </property>
+     <property name="value">
+      <number>3</number>
+     </property>
+     <property name="sliderPosition">
+      <number>3</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="tickPosition">
+      <enum>QSlider::TicksBelow</enum>
+     </property>
+     <property name="tickInterval">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="txtNote">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>220</y>
+       <width>361</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New'; font-size:8pt; color:#0f1115;&quot;&gt;📝 NHẬP GHI CHÚ CỦA BẠN:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>130</y>
+       <width>51</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;😍&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnToPage3">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>50</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">   QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 18px;         /* bo tròn */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}</string>
+     </property>
+     <property name="text">
+      <string>📈BIỂU ĐỒ CẢM XÚC</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnSave">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>50</y>
+       <width>181</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+       QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 18px;         /* bo tròn */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}</string>
+     </property>
+     <property name="text">
+      <string>💾 LƯU CẢM XÚC</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnToPage2">
+     <property name="geometry">
+      <rect>
+       <x>660</x>
+       <y>100</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">   QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 18px;         /* bo tròn */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}</string>
+     </property>
+     <property name="text">
+      <string>📋LỊCH CẢM XÚC</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnToPage4">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>100</y>
+       <width>181</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">   QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 18px;         /* bo tròn */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}</string>
+     </property>
+     <property name="text">
+      <string>🔍PHÂN TÍCH AI</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>130</y>
+       <width>61</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;😊&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>140</y>
+       <width>47</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;🙂&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>140</y>
+       <width>47</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;😐&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>140</y>
+       <width>61</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;😞&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>130</y>
+       <width>51</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;😢&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="textEdit">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>230</y>
+       <width>331</width>
+       <height>131</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Back">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>380</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">   QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 18px;         /* bo tròn */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}</string>
+     </property>
+     <property name="text">
+      <string>QUAY LẠI</string>
+     </property>
+    </widget>
+    <zorder>label_7</zorder>
+    <zorder>label_6</zorder>
+    <zorder>frame</zorder>
+    <zorder>progressBar_emotion</zorder>
+    <zorder>txtNote</zorder>
+    <zorder>btnToPage3</zorder>
+    <zorder>btnSave</zorder>
+    <zorder>btnToPage2</zorder>
+    <zorder>btnToPage4</zorder>
+    <zorder>label_5</zorder>
+    <zorder>label_4</zorder>
+    <zorder>label_3</zorder>
+    <zorder>label_2</zorder>
+    <zorder>textEdit</zorder>
+    <zorder>Back</zorder>
+   </widget>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>10</y>
+      <width>901</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>901</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#EAF5F0;
+border-top-left-radius:20px;
+border-top-right-radius:20px;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600; color:#005500;&quot;&gt;NHẬT KÝ CẢM XÚC &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>1320</x>
+      <y>0</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+               QPushButton{
+                   font-size:18px;
+                   border:none;
+                   background:transparent;
+               }
+               QPushButton:hover{
+                   background:red;
+                   color:white;
+               }</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>1290</x>
+      <y>0</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+               QPushButton{
+                   font-size:18px;
+                   border:none;
+                   background:transparent;
+               }
+               QPushButton:hover{
+                   background:#E0E0E0;
+               }
+               </string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>0</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">  QPushButton{
+                   font-size:18px;
+                   border:none;
+                   background:transparent;
+               }
+               QPushButton:hover{
+                   background:#E0E0E0;
+               }</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1353</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="../../Pictures/Screenshots/m.qrc"/>
+ </resources>
+ <connections/>
+</ui>
