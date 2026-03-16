@@ -20,15 +20,15 @@
    <string>Mindful study </string>
   </property>
   <property name="styleSheet">
-   <string notr="true">#centralwidget {
-    border-image: url(&quot;C:/Users/nguye/OneDrive/Pictures/Screenshots/Ảnh chụp màn hình 2026-03-09 213120.png&quot;) 0 0 0 0 stretch stretch;
+   <string notr="true">#centralwidget{
+border-image: url( &quot;C:/Users/nguye/Downloads/bgd.jpg&quot;);
 }</string>
   </property>
   <property name="unifiedTitleAndToolBarOnMac">
    <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout_3">
+   <layout class="QVBoxLayout" name="verticalLayout_9">
     <item>
      <widget class="QFrame" name="frame_9">
       <property name="styleSheet">
@@ -44,6 +44,39 @@
        <enum>QFrame::Raised</enum>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QPushButton" name="btn_back">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-family: &quot;Avenir Next&quot;;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}</string>
+         </property>
+         <property name="text">
+          <string>Quay lại </string>
+         </property>
+        </widget>
+       </item>
        <item>
         <spacer name="horizontalSpacer">
          <property name="orientation">
@@ -61,8 +94,8 @@
         <widget class="QFrame" name="frame_7">
          <property name="maximumSize">
           <size>
-           <width>151</width>
-           <height>52</height>
+           <width>160</width>
+           <height>60</height>
           </size>
          </property>
          <property name="contextMenuPolicy">
@@ -70,8 +103,8 @@
          </property>
          <property name="styleSheet">
           <string notr="true">QFrame {
-    background-color: transparent; /* Làm trong suốt màu nền 100% */
-    border: none;                  /* Xóa luôn cái đường viền (nếu có) để khỏi bị gạch chéo */
+    background-color: transparent; 
+    border: none;                 
 }</string>
          </property>
          <property name="frameShape">
@@ -90,8 +123,7 @@
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">
-               QPushButton{
+             <string notr="true">QPushButton{
                    font-size:18px;
                    border:none;
                    background:transparent;
@@ -99,8 +131,7 @@
                QPushButton:hover{
                    background:#E0E0E0;
                }
-               &quot;&quot;&quot;)
-</string>
+               </string>
             </property>
             <property name="text">
              <string>–</string>
@@ -414,7 +445,7 @@ QPushButton:pressed {
 }</string>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>3</number>
         </property>
         <widget class="QWidget" name="page_1">
          <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -438,6 +469,12 @@ QPushButton:pressed {
                  <height>46</height>
                 </size>
                </property>
+               <property name="styleSheet">
+                <string notr="true">QFrame {
+    background-color: transparent; 
+    border: none;                 
+}</string>
+               </property>
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
@@ -456,7 +493,7 @@ QPushButton:pressed {
                  <widget class="QLabel" name="lbl_nhiemvu">
                   <property name="styleSheet">
                    <string notr="true">QLabel {
-    color: #5D4037; /* Màu nâu đất */ 
+    color: #444743; /* Màu nâu đất */ 
     font-family: &quot;Avenir Next &quot;, sans-serif;
     font-size: 18px;
     font-weight: bold;
@@ -472,12 +509,27 @@ QPushButton:pressed {
               </widget>
              </item>
              <item>
-              <widget class="QListWidget" name="listWidget_nv">
-               <property name="enabled">
-                <bool>true</bool>
-               </property>
+              <widget class="QFrame" name="frame_10">
                <property name="styleSheet">
-                <string notr="true">QListWidget {
+                <string notr="true">QFrame {
+    background-color: transparent; 
+    border: none;                 
+}</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_9">
+                <item>
+                 <widget class="QListWidget" name="listWidget_nv">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QListWidget {
     background-color: rgba(255, 255, 255, 180); 
     border-radius: 10px;
     border: 1px solid #DCE3D5;
@@ -492,16 +544,83 @@ QListWidget::item:selected {
     color: white;
     border-radius: 5px;
 }</string>
-               </property>
-               <property name="selectionMode">
-                <enum>QAbstractItemView::SingleSelection</enum>
-               </property>
+                  </property>
+                  <property name="selectionMode">
+                   <enum>QAbstractItemView::SingleSelection</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="btn_xoa1">
+                  <property name="maximumSize">
+                   <size>
+                    <width>76</width>
+                    <height>44</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-family: &quot;Avenir Next&quot;;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}QPushButton {
+    background-color: #7FBF9F;   /* xanh nhạt */
+    color: white;                /* chữ trắng */
+    border-radius: 22px;         /* bo tròn */
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #5FA382;   /* xanh đậm khi rê chuột */
+}
+
+QPushButton:pressed {
+    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>Xóa </string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_nv">
+              <widget class="QFrame" name="frame_11">
                <property name="styleSheet">
-                <string notr="true">QLineEdit {
+                <string notr="true">QFrame {
+    background-color: transparent; 
+    border: none;                 
+}</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_7">
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_nv">
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit {
     background-color: white;
     border: 2px solid #8db596;
     border-radius: 15px;
@@ -510,16 +629,22 @@ QListWidget::item:selected {
     font-family:&quot;Avenir Next&quot;;
     color: #4a5c4d;
 }</string>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="btn_them1">
-               <property name="styleSheet">
-                <string notr="true">QPushButton {
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="btn_them1">
+                  <property name="maximumSize">
+                   <size>
+                    <width>76</width>
+                    <height>44</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
     background-color: #7FBF9F;   /* xanh nhạt */
     color: white;                /* chữ trắng */
     border-radius: 22px;         /* bo tròn */
@@ -553,53 +678,13 @@ QPushButton:hover {
 QPushButton:pressed {
     background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
 }</string>
-               </property>
-               <property name="text">
-                <string>Thêm</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="btn_xoa1">
-               <property name="styleSheet">
-                <string notr="true">QPushButton {
-    background-color: #7FBF9F;   /* xanh nhạt */
-    color: white;                /* chữ trắng */
-    border-radius: 22px;         /* bo tròn */
-    font-size: 20px;
-    font-family: &quot;Avenir Next&quot;;
-    font-weight: bold;
-    padding: 10px;
-    border: none;
-}
-
-QPushButton:hover {
-    background-color: #5FA382;   /* xanh đậm khi rê chuột */
-}
-
-QPushButton:pressed {
-    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
-}QPushButton {
-    background-color: #7FBF9F;   /* xanh nhạt */
-    color: white;                /* chữ trắng */
-    border-radius: 22px;         /* bo tròn */
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px;
-    border: none;
-}
-
-QPushButton:hover {
-    background-color: #5FA382;   /* xanh đậm khi rê chuột */
-}
-
-QPushButton:pressed {
-    background-color: #4E8C70;   /* xanh đậm hơn khi bấm */
-}</string>
-               </property>
-               <property name="text">
-                <string>Xóa </string>
-               </property>
+                  </property>
+                  <property name="text">
+                   <string>Thêm</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </widget>
              </item>
             </layout>
@@ -613,7 +698,7 @@ QPushButton:pressed {
            <widget class="QLabel" name="lbl_quanlydl">
             <property name="styleSheet">
              <string notr="true">QLabel {
-    color: #5D4037; /* Màu nâu đất */ 
+    color: #444743; /* Màu nâu đất */ 
     font-family: &quot;Anenir Next&quot;, sans-serif;
     font-size: 18px;
     font-weight: bold;
@@ -844,7 +929,7 @@ QListWidget::item:selected {
               <widget class="QLabel" name="lbl_thoikhoabieu">
                <property name="styleSheet">
                 <string notr="true">QLabel {
-    color: #5D4037; /* Màu nâu đất */ 
+    color: #444743; /* Màu nâu đất */ 
     font-family: &quot;Avenir Next&quot;, sans-serif;
     font-size: 18px;
     font-weight: bold;
@@ -974,7 +1059,7 @@ QHeaderView::section:vertical {
            <widget class="QLabel" name="lbl_taptrung">
             <property name="styleSheet">
              <string notr="true">QLabel {
-    color: #5D4037; /* Màu nâu đất */ 
+    color: #444743; /* Màu nâu đất */ 
     font-family: &quot;Avenir Next &quot;, sans-serif;
     font-size: 18px;
     font-weight: bold;
@@ -1032,6 +1117,43 @@ QListWidget::item:selected {
       </item>
      </layout>
     </item>
+    <item>
+     <widget class="QFrame" name="frame_6">
+      <property name="maximumSize">
+       <size>
+        <width>45</width>
+        <height>83</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame {
+    background-color: transparent; 
+    border: none;               
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>58</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -1047,8 +1169,7 @@ QListWidget::item:selected {
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="../hinhnen1.qrc"/>
-  <include location="../icon.qrc"/>
+  <include location="../../../../Downloads/background.qrc"/>
  </resources>
  <connections/>
 </ui>

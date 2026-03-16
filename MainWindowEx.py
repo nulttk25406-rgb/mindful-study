@@ -2,6 +2,7 @@ import sys
 import json
 import os.path 
 from PyQt6.QtCore import Qt
+from PyQt6.QtWidgets import QHeaderView
 from PyQt6.QtGui import QShortcut, QKeySequence
 from PyQt6.QtWidgets import (QApplication, QMainWindow, QListWidgetItem, 
                              QTableWidgetItem, QMessageBox)
@@ -20,12 +21,13 @@ class MainWindowEx(Ui_Mindfulstudy):
         super().setupUi(MainWindow)
         self.MainWindow = MainWindow 
         self.MainWindow.setWindowFlag(Qt.WindowType.FramelessWindowHint)
-        self.stackedWidget.setCurrentIndex(0) # Trang đầu tiên khi mở app
+        self.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
+        self.tableWidget.verticalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
+        self.stackedWidget.setCurrentIndex(0) 
         self.setupSignalAndSlot()
     def show(self):
         self.MainWindow.show()    
         
-        # tải dữ liệu
         self.processLoadData()
 
     def setupSignalAndSlot(self):
@@ -33,17 +35,17 @@ class MainWindowEx(Ui_Mindfulstudy):
         self.btn_maximize.clicked.connect(self.processMaximize)
         self.btn_close.clicked.connect(self.processClose)
 
-    # kết nối nút chuyển trang     
+    # chuyển giữa các trang      
         self.btn_deadlines.clicked.connect(self.processChuyenTrangDeadlines)
         self.btn_thoikhoabieu.clicked.connect(self.processChuyenTrangThoiKhoaBieu)
         self.btn_taptrung.clicked.connect(self.processChuyenTrangTapTrung)
-       
+        self.btn_back.clicked.connect(self.processChuyenTrangHome)
 
-    # kết nối nút chuyển trang 0    
+    # chuyển trang 0    
         self.btn_them1.clicked.connect(self.processAddTask)
         self.lineEdit_nv.returnPressed.connect(self.processAddTask) 
         self.btn_xoa1.clicked.connect(self.processDeleteTask)
-    # kết nối chuyển trang 1
+    # chuyển trang 1
         self.btn_them2.clicked.connect(self.processAddDeadline)
         self.btn_xoa2.clicked.connect(self.processDeleteDeadline)
         self.btn_luu.clicked.connect(self.processAutoSaveDeadline)
@@ -75,7 +77,7 @@ class MainWindowEx(Ui_Mindfulstudy):
 
 
 
-    # kết nối các nút cửa sổ 
+    # các nút cửa sổ 
     def processMinimize(self):
         self.MainWindow.showMinimized() 
 
@@ -109,6 +111,7 @@ class MainWindowEx(Ui_Mindfulstudy):
         self.lineEdit_nv.setText("")
         self.lineEdit_nv.setFocus()
         self.processAutoSaveTask()
+
     #thêm deadline 
     def processAddDeadline(self):
                 ten_deadline = self.lineEdit_dl.text().strip()
@@ -124,7 +127,6 @@ class MainWindowEx(Ui_Mindfulstudy):
                 self.lineEdit_dl.setText("")
                 self.lineEdit_dl.setFocus()
                
-        
 # xóa nhiệm vụ
     def processDeleteTask(self):
         row = self.listWidget_nv.currentRow()
@@ -160,7 +162,7 @@ class MainWindowEx(Ui_Mindfulstudy):
             item.setText("") 
 
   
-    # Lưu tự động
+    # lưu tự động
     def processAutoSaveTask(self):
         ds = [self.listWidget_nv.item(i).data(Qt.ItemDataRole.UserRole) for i in range(self.listWidget_nv.count())]
         with open(self.file_dataTask, "w", encoding="utf-8") as f:
@@ -184,7 +186,7 @@ class MainWindowEx(Ui_Mindfulstudy):
         with open(self.file_dataTKB, "w", encoding="utf-8") as f:
             f.write(json.dumps([o.__dict__ for o in ds_tkb], ensure_ascii=False, indent=4))
 
-    #Đọc dữ liệu json sang đối tượng 
+    #đọc dữ liệu json sang đối tượng 
     def processLoadData(self):
         # task 
         if os.path.isfile(self.file_dataTask):
